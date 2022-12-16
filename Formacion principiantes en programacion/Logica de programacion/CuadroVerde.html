@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+<canvas widh="600" height="400"></canvas>
+
+<script>
+	function dibujaCuadradoVerde(x,y,color){
+		var pantalla = document.querySelector("canvas");
+		var pincel = pantalla.getContext("2d");
+
+		pincel.fillStyle = "green";
+		pincel.fillRect(x,y,50,50);
+		pincel.fillStyle = "black";
+		pincel.fillRect(x,y,50,50);
+	}
+
+	dibujaCuadradoVerde(0,0,"red");
+	dibujaCuadradoVerde(0,50,"yellow");
+	dibujaCuadradoVerde(0,100,"green");
+</script>

@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<canvas widh="600" height="400"></canvas>
+
+<script>
+	function dibujaCuadradoVerde(x,y,color){
+		var pantalla = document.querySelector("canvas");
+		var pincel = pantalla.getContext("2d");
+
+		pincel.fillStyle = "green";
+		pincel.fillRect(x,y,50,50);
+		pincel.fillStyle = "black";
+		pincel.fillRect(x,y,50,50);
+	}
+
+	/*var x = 0;
+	while(x < 600){
+		dibujaCuadradoVerde(0,0,"red");
+		dibujaCuadradoVerde(0,50,"yellow");
+		dibujaCuadradoVerde(0,100,"green");
+		x = x + 50;
+	}*/
+	
+	for(var x = 0;x < 600;x++){
+		dibujaCuadradoVerde(0,0,"red");
+		dibujaCuadradoVerde(0,50,"yellow");
+		dibujaCuadradoVerde(0,100,"green");
+	}
+</script>

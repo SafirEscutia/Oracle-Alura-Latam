@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<h1>Programa calcular puntos de un equipo de futbol</h1>
+<script>
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function imprimir(frase){
+        document.write(frase);
+        saltarLinea();
+    }
+
+    var numeroPenzado = Math.round(Math.random()*10);
+    var intentos = 3;
+    var contador =1;
+
+    while(contador <= intentos){
+        var numerLanzado = parseInt(prompt("Ingrese un numero entre 0 - 10"))
+
+        if(numeroPenzado == numerLanzado){
+            alert("Usted acerto, en el intento" + intentos + "el numero pensado era: " + numeroPenzado);
+            break;
+        }else{
+            alert("Usted erro")
+        }
+
+        contador++;
+    }
+
+    if(numeroPenzado == numerLanzado){
+        imprimir("Usted acertó1");
+    }else{
+        imprimir("Usted erro, el numero era: " + numeroPenzado);
+    }
+    imprimir("Fin");
+</script>

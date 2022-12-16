@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+<canvas widh="600" height="400"></canvas>
+
+<script>
+    
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle = "ligtgrey";
+    pincel.fillRect(0,0,600,400);
+        
+    function disenharCircuferencia(x,y,radio){
+        pincel.fillStyle ="blue";
+        pincel.beginPath();
+        pincel.arc(x,y,radio,0,2,Math.PI);
+        pincel.fill();
+    }
+
+    var x = 0;
+
+    function limpiaPantalla(){
+        pincel.clearRect(0,0,600,400);
+    }
+
+    function actualizarPantalla (){
+        limpiaPantalla();
+        disenharCircuferencia(x,20,10);
+        x++;
+    }
+    
+    function disenharObjetivo(x,y){
+        disenharCircuferencia(x,y,radio + 20,"red");
+        disenharCircuferencia(x,y,radio + 10,"white");
+        disenharCircuferencia(x,y,radio,"red");
+    }
+
+    function sortearPosicion(maxino){
+        return Math.floor()
+    }
+
+    xAleatorio = 600;
+    yAleatorio = 400;
+
+    disenharObjetivo(xAleatorio,xAleatorio);
+
+</script>
